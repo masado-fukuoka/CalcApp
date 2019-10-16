@@ -27,7 +27,7 @@ class CalcApp2 : AppCompatActivity() {
 
         val value7 = intent.getIntExtra("VALUE7",0)
         val value8 = intent.getIntExtra("VALUE8", 0)
-        textView4.text = "割り算結果: ${value7 - value8}"
+        textView4.text = "割り算結果: ${value7 / value8}"
 
     }
 
