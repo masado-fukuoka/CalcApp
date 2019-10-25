@@ -30,8 +30,8 @@ class CalcApp2 : AppCompatActivity() {
         val value8 = intent.getDoubleExtra("VALUE8", 0.00)
 
         if(value7 > -1 && value7 < 1 || value8 > -1 && value8 < 1) {
-            textView4.text = "割り算結果:ゼロ以外の数字で計算してください。"
-        }else {
+            textView4.text = "ゼロ以外の数字を入力してください。"
+        } else{
             textView4.text = "割り算結果: ${value7 / value8}"
         }
 

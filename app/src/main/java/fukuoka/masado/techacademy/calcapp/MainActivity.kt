@@ -1,3 +1,5 @@
+
+
 package fukuoka.masado.techacademy.calcapp
 
 import android.content.Intent
@@ -14,33 +16,51 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        plus.setOnClickListener{
-            val intent = Intent(this, CalcApp2::class.java)
-            intent.putExtra("VALUE1", editText1.text.toString().toInt())
-            intent.putExtra("VALUE2", editText2.text.toString().toInt())
-            startActivity(intent)
+        plus.setOnClickListener {
+
+            if (editText1.text.isEmpty()||editText2.text.isEmpty()) {
+                dentaku.text = "数値を入力してください。"
+            } else {
+                val intent = Intent(this, CalcApp2::class.java)
+                intent.putExtra("VALUE1", editText1.text.toString().toDouble())
+                intent.putExtra("VALUE2", editText2.text.toString().toDouble())
+                startActivity(intent)
+            }
         }
 
-        minus.setOnClickListener{
-            val intent2 = Intent(this, CalcApp2::class.java)
-            intent2.putExtra("VALUE3", editText1.text.toString().toInt())
-            intent2.putExtra("VALUE4", editText2.text.toString().toInt())
-            startActivity(intent2)
+        minus.setOnClickListener {
+            if (editText1.text.isEmpty() || editText2.text.isEmpty()) {
+                dentaku.text = "数値を入力してください。"
+            } else {
+                val intent2 = Intent(this, CalcApp2::class.java)
+                intent2.putExtra("VALUE3", editText1.text.toString().toDouble())
+                intent2.putExtra("VALUE4", editText2.text.toString().toDouble())
+                startActivity(intent2)
+            }
         }
 
-        multiply.setOnClickListener{
-            val intent3 = Intent(this, CalcApp2::class.java)
-            intent3.putExtra("VALUE5", editText1.text.toString().toInt())
-            intent3.putExtra("VALUE6", editText2.text.toString().toInt())
-            startActivity(intent3)
+        multiply.setOnClickListener {
+            if (editText1.text.isEmpty() || editText2.text.isEmpty()) {
+                dentaku.text = "数値を入力してください。"
+            } else {
+                val intent3 = Intent(this, CalcApp2::class.java)
+                intent3.putExtra("VALUE5", editText1.text.toString().toDouble())
+                intent3.putExtra("VALUE6", editText2.text.toString().toDouble())
+                startActivity(intent3)
+            }
         }
 
-        divide.setOnClickListener{
-            val intent4 = Intent(this, CalcApp2::class.java)
-            intent4.putExtra("VALUE7", editText1.text.toString().toInt())
-            intent4.putExtra("VALUE8", editText2.text.toString().toInt())
-            startActivity(intent4)
+        divide.setOnClickListener {
+            if (editText1.text.isEmpty() || editText2.text.isEmpty()) {
+                dentaku.text = "数値を入力してください。"
+            } else{
+                val intent4 = Intent(this, CalcApp2::class.java)
+                    intent4.putExtra("VALUE7", editText1.text.toString().toDouble())
+                    intent4.putExtra("VALUE8", editText2.text.toString().toDouble())
+                    startActivity(intent4)
+            }
         }
+
 
     }
 
@@ -58,6 +78,17 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
